@@ -48,8 +48,7 @@ class Graph:
                 
                 i=stack.pop()
         print(stack1)       
-    def traverse(self,start,end):
-        pass
+    
         
 nodes=[11,7,8,9,12,13,10,3]
 edge=[[11,7],[11,9],[7,10],[7,8],[8,9],[8,12],[12,10],[12,13],[10,9],[11,3]]
