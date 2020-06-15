@@ -19,35 +19,25 @@ class Graph:
                 print("->"+str(j),end =" ")
             print()
     def dfs(self,start):
-        boolean_list={}
-        for i in self.__nodes:
-            boolean_list[i]=False    
         i=start
-        
         stack=[]
-        stack.append(i)
-        stack1=[]
-        stack1.append(i)
-        boolean_list[i]=True
-        while(len(stack1)!=len(nodes)):
+        stack.append(i)    
+        while(True):
             t=self.__adjlist[i]
             z=False
             for j in t:
-                
-                if boolean_list[j]==False:
-                    
+                if j not in stack:
+                    q=0
                     i=j
-                    boolean_list[j]=True
-                    stack1.append(j)
                     stack.append(j)
-                    
                     z=True
+                    break   
+            if j in stack and z==False:
+                q=q-1
+                if (-q)> len(stack):
                     break
-                
-            if z==False:
-                
-                i=stack.pop()
-        print(stack1)
+                i=stack[q]
+        print(stack)
     
             
         
